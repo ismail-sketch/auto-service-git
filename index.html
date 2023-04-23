@@ -28,7 +28,10 @@
                         <li class="mainMenu__item"><a href="#">КОНТАКТЫ</a></li>
                     </ul>
                 </nav>
-                <button class="mainMenu__btn main-top-btn popup-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+                <div  class="main-top-btn mainMenu__info-wrp">
+                    <a href="tel:+79999999999">+7(999)999-99-99</a>
+                    <p>Ежедневно с 9:00 до 18:00</p>
+                </div>
             </div>
             </div>
     </header>
@@ -38,7 +41,7 @@
             <div class="mainScreen__cont-wrp">
                 <div class="mainScreen__left-wrp">
                     <h1 class="mainScreen__title">БЫСТРЫЙ И НАДЕЖНЫЙ <br> РЕМОНТ ВАШЕГО АВТО</h1>
-                    <button class="mainMenu__btn main-btn popup-btn">ЗАПРОСИТЬ ПРАЙС</button>
+                    <button class="mainMenu__btn main-btn popup-btn">ЗАКАЗАТЬ ЗВОНОК</button>
                 </div>
                 <div class="mainScreen__items-wrp">
                     <div class="mainScreen__item">
@@ -192,6 +195,16 @@
         </div>
     </section>
 
+    <section class="formSection">
+        <div class="container">
+            <form class="form formSection__form">
+                <input placeholder="Ваше имя" type="text" class="input__name">
+                <input placeholder="Ваш телефон" type="text" class="input__tel input-tel">
+                <button>Записаться</button>
+            </form>
+        </div>
+    </section>
+
     <section class="galery">
         <div class="container">
             <h2 class="title galery__title">НАШ СЕРВИС</h2>
@@ -238,7 +251,7 @@
                <input type="text" id="input__tel" name="tel" class="input__tel input-tel" placeholder="Ваш телефон">
 
                <label for="input__email"></label>
-               <input type="email" required id="input__email" name="email" class="input__tel" placeholder="Ваш email">
+               <input type="email" required id="input__email" name="email" class="input__email input__tel" placeholder="Ваш email">
 
                <button class="form__btn">Отправить</button>
            </form>

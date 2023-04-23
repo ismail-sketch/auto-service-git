@@ -268,6 +268,36 @@ img{vertical-align: top;}
             }
         }
     }
+    &__info-wrp {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        gap: 3px;
+        &::before {
+            content: '';
+            width: 1px;
+            height: 30px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+            left: -10px;
+            @media (max-width: 980px) {
+                display: none;
+            }
+        }
+        color: #fff;
+        a {
+            color: inherit;
+            transition: all .3s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: rgb(255, 74, 74);
+                }
+            }
+        }
+    }
 }
 .main-top-btn {
 
@@ -599,10 +629,68 @@ img{vertical-align: top;}
     }
 }
 
+/*FORMSECTION============================*/
+.formSection {
+    width: 100%;
+    padding: 50px 0;
+    @include adaptiveAllCont('padding-top', 50, 30, 1230, 320);
+    @include adaptiveAllCont('padding-bottom', 50, 30, 1230, 320);
+    background-color: #000000db;
+    .formSection__form {
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: auto;
+        gap: 30px;
+        padding: 0;
+        align-items: center;
+        @media (max-width: 950px) {
+            gap: 15px;
+        }
+        @media (max-width: 700px) {
+            grid-template-columns: repeat(1, 500px);
+            justify-content: center;
+        }
+        @media (max-width: 530px) {
+            grid-template-columns: repeat(1, 100%);
+        }
+        input {
+            width: auto;
+            margin-bottom: 0 !important;
+            border: 1px solid red;
+            height: 45px;
+            &:focus {
+                background-color: transparent;
+                color: #ffffff;
+            }
+        }
+        button {
+            width: auto;
+            height: 45px;
+            padding: 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            border: 1px solid red;
+            transition: background .3s;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: transparent;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
 /*GALERY============================*/
 .galery {
     width: 100%;
     padding: 50px 0;
+    @include adaptiveAllCont('padding-top', 50, 30, 1230, 320);
+    @include adaptiveAllCont('padding-bottom', 50, 30, 1230, 320);
     &__title {
     }
     &__wrp {
