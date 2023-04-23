@@ -95,6 +95,7 @@ window.addEventListener('click', (e) => {
     }
 })
 
+
 // Маска телефона
 let maskCode = '+7 (___) ___-__-__'
 let maskCode2 = '+38(___) ___ __ __'
