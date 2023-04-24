@@ -28,6 +28,17 @@ window.addEventListener('click', (e) => {
     }
 })
 
+// Закрытие меню по клику на пункт меню===============
+const mainMenuItem = document.querySelectorAll('.mainMenu__item');
+for(menuItem of mainMenuItem) {
+    menuItem.addEventListener('click', () => {
+        burger.forEach(item => {
+            item.classList.remove('active');
+        })
+        mainMenu.classList.remove('active');
+    })
+}
+
 // Изменение цвета хедера при скролле
 const header = document.querySelector('.header');
 function headerColor() {
@@ -95,6 +106,27 @@ window.addEventListener('click', (e) => {
     }
 })
 
+//Плавная прокрутка - "минус шапка" или без "минус-шапка"
+
+document.querySelectorAll('a[href^="#"').forEach(link => {
+
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        let href = this.getAttribute('href').substring(1);
+
+        const scrollTarget = document.getElementById(href);
+
+        const topOffset = ((document.querySelector('.header').offsetHeight)); //Указать класс class элемента (навигации), чтобы вычислить его высоту
+        //const topOffset = 0; // если не нужен отступ сверху
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
 
 // Маска телефона
 let maskCode = '+7 (___) ___-__-__'
