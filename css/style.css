@@ -1306,6 +1306,8 @@ img {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   height: 358px;
+  -webkit-box-shadow: -1px 2px 8px 2px rgba(34, 60, 80, 0.15);
+          box-shadow: -1px 2px 8px 2px rgba(34, 60, 80, 0.15);
 }
 
 @media (max-width: 530px) {
@@ -1508,7 +1510,7 @@ img {
 
 .form__btn {
   border: none;
-  background-color: #313131;
+  background-color: #c10000;
   color: #fff;
   cursor: pointer;
   -webkit-transition: background .3s;
@@ -1518,7 +1520,7 @@ img {
 }
 
 .form__btn:hover {
-  background-color: #000;
+  background-color: #990101;
 }
 
 .popup-btn {
